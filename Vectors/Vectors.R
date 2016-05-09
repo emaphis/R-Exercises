@@ -79,3 +79,7 @@ remain[c(TRUE,FALSE)]
 #   spades diamonds 
 #   11       11 
 
+# selecting subsetts inclusively
+remain[c(2:4)]
+#  hearts diamonds    clubs 
+#  12       11       13 
