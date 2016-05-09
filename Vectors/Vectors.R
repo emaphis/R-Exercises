@@ -30,3 +30,52 @@ sum(bank)
 
 earnings > expenses
 # [1]  TRUE  TRUE FALSE
+
+## subsetting vectors
+remain <- c(spades = 11, hearts = 12, diamonds = 11, clubs = 13)
+
+remain[1]
+# spades 
+# 11
+
+remain[3]
+# diamonds 
+# 11
+
+remain["spades"]
+# spades 
+# 11
+
+# selecting by position
+remain_black <- remain[c(1,4)]
+# > remain_black
+# spades  clubs 
+# 11     13
+
+# selecting by name
+remain[c("spades","clubs")]
+# spades  clubs 
+# 11     13 
+
+# subset all but some
+
+remain[-1]  # all but index 1 is returned
+# hearts diamonds    clubs 
+# 12       11       13 
+remain[-c(1,2)] # all but 1 and 2
+# diamonds    clubs 
+# 11       13
+
+# subset using a logical vector
+remain[c(FALSE,TRUE,FALSE,TRUE)]
+# hearts  clubs 
+# 12     13
+
+selection_vector <- c(FALSE,TRUE,FALSE,TRUE)
+remain[selection_vector]
+
+# recyling
+remain[c(TRUE,FALSE)]
+#   spades diamonds 
+#   11       11 
+
