@@ -1,6 +1,8 @@
 ## Matrices
 
-## Naming
+#########################
+## Naming ###############
+
 # Star Wars box office in millions (!)
 box <- c(460.998, 314.4, 290.475, 247.900, 309.306, 165.8)
 
@@ -27,3 +29,7 @@ star_wars_matrix <- matrix(c(new_hope, empire_strikes, return_jedi), byrow = TRU
 
 # Calculate the worldwide box office: worldwide_vector
 worldwide_vector <- rowSums(star_wars_matrix)
+
+# Bind the new variable worldwide_vector as a column to star_wars_matrix: star_wars_ext
+star_wars_ext <- cbind(star_wars_matrix, worldwide_vector)
+
